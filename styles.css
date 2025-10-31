@@ -8,24 +8,27 @@
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(135deg, #8DD7BF, #15394C); 
-    padding: 10px;
+    padding: 40px;
     display: flex;
-    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    box-sizing: border-box;
 }
 .todo-app{
+    flex: 1 1 350px;
     width: 300%;
-    max-width: 540px;
+    max-width: 500px;
     background: #fff;
-    margin-right: auto;
     height: 80vh;
-    padding: 40px 30px 70px;
+    padding: 30px;
     border-radius: 10px;
-    position: absolute;
-    bottom: 20px;
+    box-sizing: border-box;
     left: 20px;
+    bottom: 20px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    
 }
 #list-container{
     flex: 1;
@@ -113,16 +116,13 @@ ul li span:hover{
     background: #edeef0;
 }
 .take-notes{
-    width: 45%;
+    flex: 1 1 350px;
     max-width: 540px;
     background: #fff;
-    margin-right: auto;
     height: 65vh;
-    padding: 40px 30px 70px;
+    padding: 30px;
     border-radius: 10px;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 10px rgba(0, 0, 0 0.1);
@@ -144,24 +144,21 @@ ul li span:hover{
     overflow-y: auto;
     font-size: 18px;
     font-family:'Times New Roman', Times, serif;
-    
 }
 
 .motivational-phrase{
-    width: 45%;
+    flex: 1 1 350px;
     max-width: 540px;
     background: #fff;
-    margin-right: auto;
-    height: 25vh;
-    padding: 40px 30px 70px;
+    height: auto;
+    padding: 30px;
     border-radius: 10px;
-    position: absolute;
-    bottom: 525px;
-    right: 20px;
+    box-sizing: border-box;
+    text-align: center;
 }
 .dashboard-header{
     position: absolute;
-    top: 30px;
+    top: 20px;
     left: 20px;
     font-family: cursive;
     font-size: 25px;
@@ -175,4 +172,26 @@ ul li span:hover{
     padding: 20px;
     font-size: clamp(15px, 3vw, 20px)
 }
-
+@media (min-width: 1000px) {
+    .todo-app{
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        width: 50%;
+        max-width: 540%;
+    }
+    .take-notes{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 45%;
+        max-width: 540%;
+    }
+    .motivational-phrase{
+        position: absolute;
+        bottom: 525px;
+        right: 20px;
+        width: 45%;
+        max-width: 540%;
+    }
+}

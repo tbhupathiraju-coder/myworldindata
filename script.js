@@ -87,4 +87,3 @@ notesbox.addEventListener("input", () => {
     localStorage.setItem("notes", notesbox.value);
 });
 loadNotes();
-
