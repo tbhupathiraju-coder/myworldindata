@@ -98,13 +98,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const reader = new FileReader();
         reader.readAsDataURL(file);
-        reader.addEventListener("load", () => {
-            dashboard.body.style.background = "none";
-            dashboard.body.style.backgroundImage = `url(${reader.result})`;
-            dashboard.body.style.backgroundSize = "cover";
-            dashboard.body.style.backgroundPosition = "center";
-            dashboard.body.style.backgroundRepeat = "no-repeat";
+        reader.onload = () => {
+            dashboard.style.backgroundImage = `url(${reader.result})`;
+            dashboard.style.backgroundSize = "cover";
+            dashboard.style.backgroundPosition = "center";
+            dashboard.style.backgroundRepeat = "no-repeat";
 
-        });
+        };
     });
 });
