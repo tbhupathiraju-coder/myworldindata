@@ -8,33 +8,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content ="A website that allows users to choose a backround color or upload an image, and will be able to make a to-do list, write notes, and have a motivation quote!." />
 </head>
-<!--
 <body>
+<!--
     <div class="homepage-container">
-        <h1>Welcome to My Mood Board</h1>
+        <h1>Welcome to My World in Data</h1>
         <p>
-            Pick your theme color or upload a backround image:
+            Pick 2 colors for a gradient background OR upload you own image:
         </p>
-    </div>
 
-    <div class="hopepage-options">
-        <label>
-            Choose a color:
-        </label>
-        <input type ="color" id="colorPicker" value="#BC544B" />
-    </div>
+        <div class="hopepage-options">
+            <label>
+               Color 1:
+            </label>
+            <input type ="color" id="colorPicker1" value="#BC544B" />
+        </div>
+
+        <div class="hopepage-options">
+            <label>
+                Color 2:
+            </label>
+            <input type ="color" id="colorPicker2" value="#4BB3BC" />
+        </div>
     
-    <div class = "homepage-options">
-        <label>
+        <div class = "homepage-options">
+            <label>
             Upload backround image:
-        </label>
-        <input type="file" id="bgUpload" accept="image/*" />
-    </div>
+            </label>
+            <input type
+            ="file" id="bgUpload" accept="image/*" />
+        </div>
+
+        <button id="startButton">Start My Dashboard</button>
+    </div> 
+
 -->
-    
+ <!--      
 <ul>
     <lil><a href="dashboard.html">Start My Dashboard</a></lil>
 </ul>
+<form>
+<input type="color" name="color" 
+id="color" />
+<input type="button" id="btn" 
+value="Change the Background Color">
+</form>
+
+<script>
+    var btn = document.getElementById('btn');
+    btn.addEventListener('click', function(){
+        var color = document.getElementById('color');
+        document.body.style.backgroundColor = color.value;
+});
+</script>
+
+
+--> 
+
 
     <script src="script.js"></script>
 

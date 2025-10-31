@@ -1,12 +1,48 @@
 // Minimal script to avoid missing file errors and optionally handle Start button
-document.addEventListener('DOMContentLoaded', () => {
-  const start = document.getElementById('startButton');
-  if (start) {
-    // If dashboard navigation is desired, uncomment below and adjust as needed
-    // start.addEventListener('click', () => window.location.href = 'dashboard.html');
-  }
-});
+//document.addEventListener('DOMContentLoaded', () => {}
+/*
+ const startButton = document.getElementById('startButton');
+  if (startButton) {
+    startButton.addEventListener("click", () => {
+        const color1 = document.getElementById("colorPicker1").value;
+        const color2 = document.getElementById("colorPicker2").value;
+        const fileInput = document.getElementById("bgUpload");
+        const file = fileInput.files[0];
 
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = () => {
+            localStorage.setItem('bgImage', reader.result);
+            localStorage.removeItem('gradientColors');
+            window.location.href = 'dashboard.html';
+        };
+        reader.readAsDataURL(file);
+    } else {
+        localStorage.setItem('gradientColors', JSON.stringify([color1, color2]));
+        localStorage.removeItem('bgImage');
+        window.location.href = "dashboard.html";
+    }
+  });
+}.       
+
+
+const dashboard = document.querySelector(".dashboard-container");
+if (dashboard) {
+    const bgImage = localStorage.getItem("bgImage");
+    const gradientColors = JSON.parse(localStorage.getItem("gradientColors") || "null");
+
+    if (bgImage){
+        dashboard.style.backgroundImage = `url(${bgImage})`;
+        dashboard.style.backgroundSize = "cover";
+        dashboard.style.backgroundPosition = "center";
+    }
+    else if (gradientColors) {
+        dashboard.style.background = `linear-gradient(135deg, ${gradientColors[0]}, ${gradientColors[1]})`
+    }
+
+}
+*/
+   
 //Disclaimer:
 //Image website citing: https://www.upwork.com/services/product/development-it-a-todo-list-website-1680992775415418880
 //Youtube citing: https://www.youtube.com/watch?v=G0jO8kUrg-I
@@ -18,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //as a guide to help me do the javascript and remaining css (and still debug all my issues)
 //Most of the coding though, was done out by me, and mightve correcting and adjusted after seeing the tutorial
 
-
+  
 const inputBox = document.getElementById("todo-input-box");
 const listContainer = document.getElementById("list-container");
 

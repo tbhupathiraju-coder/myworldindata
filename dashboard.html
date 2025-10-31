@@ -51,7 +51,6 @@
                 Motivational Phrase
             </h2>
             <p id="randomQuoteText"></p>
-
         </div>
 
         <div class="dashboard-header">
@@ -61,7 +60,27 @@
         </div>
 
     </div>
-    
+
+<form>
+<input type="color" name="color" 
+id="color" />
+<input type="button" id="btn" 
+value="Change the Background Color">
+</form>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('btn');
+    const colorInput = document.getElementById('color');
+    const dashboard = document.querySelector(".dashboard-container");
+
+    btn.addEventListener('click', () => {
+        dashboard.style.background = colorInput.value;
+
+    });
+ });
+</script>
+
 
     <script src="script.js"></script>
 </body>
