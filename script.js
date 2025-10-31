@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-//Disclaimer:
+//Disclaimer for To-Do List:
 //Image website citing: https://www.upwork.com/services/product/development-it-a-todo-list-website-1680992775415418880
 //Youtube citing: https://www.youtube.com/watch?v=G0jO8kUrg-I
 
