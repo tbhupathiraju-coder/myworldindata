@@ -127,3 +127,9 @@ ul li span:hover{
     bottom: 525px;
     right: 20px;
 }
+.dashboard-header{
+    width: 58%;
+    margin-right: auto;
+    font-family: cursive;
+    
+}

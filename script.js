@@ -58,3 +58,18 @@ function showTask(){
     listContainer.innerHTML = localStorage.getItem("data");
 }
 showTask()
+
+
+const motivationalPhrases = [
+    "It always seems impossible until it's done.",
+    "Don't watch the clock; do what it does. Keep going! ~Sam Levenson",
+    "The only way to do great work is to love what you do.",
+    "Everything is hard before it is easy. ~Goethe",
+    "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do. ~Pele",
+    "Stay positive, Work hard, Make it happen."
+]
+
+    document.getElementById("randomQuoteText").textContent = motivationalPhrases[Math.floor(Math.random() * motivationalPhrases.length)];
+window.onload = () => {
+    document.getElementById("randomQuoteText").textContent = quotes[Math.floor(Math.random() * quotes.length)];
+};
