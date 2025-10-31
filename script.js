@@ -69,11 +69,22 @@ const motivationalPhrases = [
     "Your positive action combinded with positive thinking results in sucess. ~Shiv Khera",
     "Stay positive, Work hard, Make it happen."
 ]
-
-
-
 window.onload = () => {
     const randomQuote = 
     motivationalPhrases[Math.floor(Math.random() * motivationalPhrases.length)];
     document.getElementById("randomQuoteText").textContent = randomQuote;
 }
+
+
+const notesbox = document.getElementById("notes-input-box");
+function loadNotes(){
+    const savedNotes = localStorage.getItem("notes");
+    if (savedNotes) {
+        notesbox.value = savedNotes;
+    }
+}
+notesbox.addEventListener("input", () => {
+    localStorage.setItem("notes", notesbox.value);
+});
+loadNotes();
+
