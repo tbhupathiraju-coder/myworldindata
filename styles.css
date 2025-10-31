@@ -37,7 +37,7 @@
     padding-right: 10px;
 }
 .todo-app h2{
-    color: #234f1e;
+    color: black;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -175,23 +175,33 @@ ul li span:hover{
 @media (min-width: 1000px) {
     .todo-app{
         position: absolute;
-        bottom: 20px;
+        bottom: 30px;
         left: 20px;
         width: 50%;
         max-width: 540%;
     }
     .take-notes{
         position: absolute;
-        bottom: 20px;
+        bottom: 30px;
         right: 20px;
         width: 45%;
         max-width: 540%;
     }
     .motivational-phrase{
         position: absolute;
-        bottom: 525px;
+        bottom: 535px;
         right: 20px;
         width: 45%;
         max-width: 540%;
     }
+}
+#upload{
+    display: none;
+}
+label{
+    background: white;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
 }

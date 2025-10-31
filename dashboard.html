@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
     <meta name="description" content ="A website that allows users to choose a backround color or upload an image, and will be able to make a to-do list, write notes, and have a motivation quote!." />
 </head>
 
@@ -61,6 +65,18 @@
 
     </div>
 
+<!-- Citation on the how to change background color tutortial: https://www.youtube.com/watch?v=xnQcvv1Al3c -->
+    <div class="display"></div>
+    <input type="file" id="upload">
+    <label for="upload">
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+        Upload you Photo
+    </label>
+
+<!--
+    Citation on the how to change background color tutortial: https://www.youtube.com/watch?v=Bu3F8Z4pWFI 
+Tried it by myself orginally, but didn't work. Made updates to fit with the already set background color -->
+
 <form>
 <input type="color" name="color" 
 id="color" />
@@ -81,7 +97,8 @@ document.addEventListener('DOMContentLoaded', function () {
  });
 </script>
 
-
     <script src="script.js"></script>
 </body>
 </html>
+
+   
