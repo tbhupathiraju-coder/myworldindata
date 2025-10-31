@@ -6,6 +6,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // start.addEventListener('click', () => window.location.href = 'dashboard.html');
   }
 });
+
+//Disclaimer:
+//Image website citing: https://www.upwork.com/services/product/development-it-a-todo-list-website-1680992775415418880
+//Youtube citing: https://www.youtube.com/watch?v=G0jO8kUrg-I
+
+//Orginally, I searched up on google images for how a to-do list looks like on a website and found an image (click on the website cite link)
+//My goal was to use it as a reference but implement my own color choices, images, and adjustments of location (how big the box is and where its located - bottom left)
+//I wrote most of the html and css by using the image as a reference (which is why it took so long)
+//Then, I needed help and had issues running on the css (especially with the css image pathways), so I found the youtube video tutorial
+//as a guide to help me do the javascript and remaining css (and still debug all my issues)
+//Most of the coding though, was done out by me, and mightve correcting and adjusted after seeing the tutorial
+
+
 const inputBox = document.getElementById("todo-input-box");
 const listContainer = document.getElementById("list-container");
 
@@ -22,13 +35,26 @@ function addTask(){
         li.appendChild(span);
     }
     inputBox.value = "";
+    saveData();
 }
 
 listContainer.addEventListener("click", function(e){
 if(e.target.tagName === "LI"){
     e.target.classList.toggle("checked");
+    saveData()
 }
 else if(e.target.tagName === "SPAN"){
     e.target.parentElement.remove();
+    saveData()
 }
 }, false);
+
+//saves the data even if you refresh the page
+function saveData(){
+    localStorage.setItem("data", listContainer.innerHTML);
+}
+//makes sure your saved data shows up
+function showTask(){
+    listContainer.innerHTML = localStorage.getItem("data");
+}
+showTask()

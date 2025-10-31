@@ -17,7 +17,7 @@
     max-width: 540px;
     background: #fff;
     margin-right: auto;
-    height: 75vh;
+    height: 80vh;
     padding: 40px 30px 70px;
     border-radius: 10px;
     position: absolute;
@@ -102,4 +102,28 @@ ul li span{
 }
 ul li span:hover{
     background: #edeef0;
+}
+.take-notes{
+    width: 45%;
+    max-width: 540px;
+    background: #fff;
+    margin-right: auto;
+    height: 65vh;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.motivational-phrase{
+    width: 45%;
+    max-width: 540px;
+    background: #fff;
+    margin-right: auto;
+    height: 25vh;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 525px;
+    right: 20px;
 }
