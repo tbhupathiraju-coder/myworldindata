@@ -128,8 +128,18 @@ ul li span:hover{
     right: 20px;
 }
 .dashboard-header{
-    width: 58%;
-    margin-right: auto;
+    position: absolute;
+    top: 30px;
+    left: 20px;
     font-family: cursive;
-    
+    font-size: 25px;
+    text-align: left;
+    padding: 20px;
+}
+#randomQuoteText{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    line-height: 1.5;
+    padding: 20px;
+    font-size: clamp(15px, 3vw, 20px)
 }
