@@ -15,7 +15,8 @@
         <div class="todo-app">
             <h2>
                 To-Do List
-                <img src="images/todo.jpg">
+                <!-- try jpg first, fallback to svg if jpg missing -->
+                <img src="images/todo.jpg" alt="todo" onerror="this.onerror=null;this.src='images/todo.svg'">
             </h2>
 
             <div class="row">
@@ -26,7 +27,7 @@
             </div>
 
             <ul id="list-container">
-                <li>Task 1</li>
+                <li class="checked">Task 1</li>
                 <li>Task 2</li>
                 <li>Task 3</li>
             </ul>
