@@ -88,14 +88,23 @@ notesbox.addEventListener("input", () => {
 });
 loadNotes();
 
-const input = document.querySelector("#upload");
+document.addEventListener('DOMContentLoaded', function () {
+    const dashboard = document.querySelector(".dashboard-container");
 
-input.addEventListener("change", () => {
-    const file = input.files[0];
-    
-    let reader = new FileReader();
-    reader.readAsDataURL(input.files[0]);
-    reader.addEventListener("load", () => {
-        display.innerHTML = `<img src=${reader.result} alt=''/>`;
+    const input = document.querySelector("#upload");
+    input.addEventListener("change", () => {
+        const file = input.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.addEventListener("load", () => {
+            dashboard.body.style.background = "none";
+            dashboard.body.style.backgroundImage = `url(${reader.result})`;
+            dashboard.body.style.backgroundSize = "cover";
+            dashboard.body.style.backgroundPosition = "center";
+            dashboard.body.style.backgroundRepeat = "no-repeat";
+
+        });
     });
 });
