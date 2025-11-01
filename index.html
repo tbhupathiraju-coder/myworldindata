@@ -1,12 +1,107 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta http-equiv="refresh" content="0; url=dashboard.html">
-    <title>Redirecting...</title>
+    <title>My World in Data</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+    <meta name="description" content ="A website that allows users to choose a backround color or upload an image, and will be able to make a to-do list, write notes, and have a motivation quote!." />
 </head>
+
+
 <body>
-    <p>Redirecting to <a href="dashboard.html">Dashboard</a>...</p>
+    <div class="dashboard-container">
+        <!--All for the to-do list (they work together)-->
+        <div class="todo-app">
+            <h2>
+                To-Do List
+                <!-- try jpg first, fallback to svg if jpg missing -->
+                <img src="images/todo.jpg" alt="todo" onerror="this.onerror=null;this.src='images/todo.svg'">
+            </h2>
+
+            <div class="row">
+                <input type ="text" id="todo-input-box" placeholder = "Add a new task!">
+                <button onclick="addTask()">
+                    Add
+                </button>
+            </div>
+
+            <ul id="list-container">
+                <!--
+                <li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>
+                -->
+            </ul>
+        </div>
+
+        <!-- For taking notes, box and title-->
+        <div class="take-notes">
+            <h2>
+                Notes
+            </h2>
+            <div class="type">
+                <textarea id="notes-input-box" placeholder="Jot a few notes!"></textarea>
+            </div>
+        </div>
+
+        <!-- For generating a motivational phrase, box and random text-->
+        <div class="motivational-phrase">
+            <h2>
+                Motivational Phrase
+            </h2>
+            <p id="randomQuoteText"></p>
+        </div>
+
+        <!-- Title!-->
+        <div class="dashboard-header">
+        <h1>
+                My World in Data
+        </h1>
+        </div>
+
+    </div>
+
+ 
+<h2>Change Your Background</h2>
+<!-- Citation on the how to change background color tutortial: https://www.youtube.com/watch?v=xnQcvv1Al3c -->
+    <div class="display"></div>
+    <input type="file" id="upload">
+    <label for="upload">
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+        Upload you Photo
+    </label>
+<h2>OR</h2>
+<!--
+    Citation on the how to change background color tutortial: https://www.youtube.com/watch?v=Bu3F8Z4pWFI 
+Tried it by myself orginally, but didn't work. Made updates to fit with the already set background color -->
+<form>
+<input type="color" name="color" 
+id="color" />
+<input type="button" id="btn" 
+value="Click Here after you Choose your Color">
+</form>
+
+<!--Changes the background color depending on what the user drags-->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('btn');
+    const colorInput = document.getElementById('color');
+    const dashboard = document.querySelector(".dashboard-container");
+
+    btn.addEventListener('click', () => {
+        dashboard.style.background = colorInput.value;
+
+    });
+ });
+</script>
+
+    <script src="script.js"></script>
 </body>
 </html>
+   
