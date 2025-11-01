@@ -16,6 +16,7 @@
 
 <body>
     <div class="dashboard-container">
+        <!--All for the to-do list (they work together)-->
         <div class="todo-app">
             <h2>
                 To-Do List
@@ -39,7 +40,7 @@
             </ul>
         </div>
 
-
+        <!-- For taking notes, box and title-->
         <div class="take-notes">
             <h2>
                 Notes
@@ -49,7 +50,7 @@
             </div>
         </div>
 
-
+        <!-- For generating a motivational phrase, box and random text-->
         <div class="motivational-phrase">
             <h2>
                 Motivational Phrase
@@ -57,6 +58,7 @@
             <p id="randomQuoteText"></p>
         </div>
 
+        <!-- Title!-->
         <div class="dashboard-header">
         <h1>
                 My World in Data
@@ -85,6 +87,7 @@ id="color" />
 value="Click Here after you Choose your Color">
 </form>
 
+<!--Changes the background color depending on what the user drags-->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const btn = document.getElementById('btn');

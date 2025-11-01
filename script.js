@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //as a guide to help me do the javascript and remaining css (and still debug all my issues)
 //Most of the coding though, was done out by me, and mightve correcting and adjusted after seeing the tutorial
 
-  
+//Code for the To-Do List, it has a slash when you're done with a task, an add button, a check button, and can x out when needed
 const inputBox = document.getElementById("todo-input-box");
 const listContainer = document.getElementById("list-container");
 
@@ -59,7 +59,7 @@ function showTask(){
 }
 showTask()
 
-
+//Random phrases that can potentially pop up
 const motivationalPhrases = [
     "It always seems impossible until it's done.",
     "Don't watch the clock; do what it does. Keep going! ~Sam Levenson",
@@ -75,7 +75,7 @@ window.onload = () => {
     document.getElementById("randomQuoteText").textContent = randomQuote;
 }
 
-
+//Notes to save when refreshed
 const notesbox = document.getElementById("notes-input-box");
 function loadNotes(){
     const savedNotes = localStorage.getItem("notes");
@@ -87,7 +87,7 @@ notesbox.addEventListener("input", () => {
     localStorage.setItem("notes", notesbox.value);
 });
 loadNotes();
-
+//Changes background based on user uploading image
 document.addEventListener('DOMContentLoaded', function () {
     const dashboard = document.querySelector(".dashboard-container");
 
